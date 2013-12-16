@@ -10,3 +10,4 @@ With one touch, the web page can be saved to be read later.
 
 This app delivers the web page address to Pocket.
 You should already be signed in within Pocket before using this app.
+This is not affiliated with Pocket(http://getpocket.com/).
