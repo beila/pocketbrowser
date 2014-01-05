@@ -26,10 +26,25 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_7
         targetCompatibility JavaVersion.VERSION_1_7
     }
+    def hasSigningProperties = project.hasProperty("MY_KEY_STORE")
+    hasSigningProperties = hasSigningProperties && project.hasProperty("MY_KEY_STORE_PASSWORD")
+    hasSigningProperties = hasSigningProperties && project.hasProperty("MY_KEY_ALIAS")
+    hasSigningProperties = hasSigningProperties && project.hasProperty("MY_KEY_PASSWORD")
+    if (hasSigningProperties) {
+        signingConfigs {
+            release {
+                storeFile file(project.property("MY_KEY_STORE"))
+                storePassword project.property("MY_KEY_STORE_PASSWORD")
+                keyAlias project.property("MY_KEY_ALIAS")
+                keyPassword project.property("MY_KEY_PASSWORD")
+            }
+        }
+    }
     buildTypes {
         release {
             runProguard false
             proguardFile getDefaultProguardFile('proguard-android.txt')
+            if (hasSigningProperties) { signingConfig signingConfigs.release }
         }
     }
     productFlavors {
