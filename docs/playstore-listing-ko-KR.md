@@ -11,6 +11,11 @@ Pocket은 웹페이지를 "글"과 "중요한 사진"만 보이도록 변형해�
 이 앱은 웹페이지 주소를 Pocket에 전달하는 기능만을 수행하며, 이 앱을 사용하기 전에 Pocket 앱이 로그인되어있어야 합니다.
 이 앱 저자는 Pocket(http://getpocket.com)과 관련이 없습니다.
 
+High-res icon
+=============
+High-res-icon.png
+(obtained from http://en.wikipedia.org/wiki/OS-tan )
+
 Application type
 ================
 Applications
